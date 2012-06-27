@@ -122,11 +122,9 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
 
 	<div class="grid_660">
     <h1 class="imageheader"><img src="../images/echo-organization-guide.gif" alt="Organization Guide" /></h1>
-    <?php if ($organization=='') { ?>
     <p>
     Understanding the &ldquo;who&rsquo;s who&rdquo; of organizations involved in U.S. GME can be difficult, but knowing who to contact about what and how is an essential part of your successful integration into the U.S. health care system. To help you navigate this system, we have compiled a list of the organizations you will likely come in contact with during the residency application process and throughout your first year of residency. To view an organization&rsquo;s mission, website, and information about what you would contact them for and what resources they can offer to assist you, click on the appropriate tab below.
     </p>
-    <?php } else {} ?>
 		<div class="div_660">
 		<div class="fadeholder">
 		  <div class="menu">
@@ -291,6 +289,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
       <!-- ############## AMA ################ -->
       <?	} else if($organization == "ama"){ ?>
 		  <div class="organization">
+		    <h5 class="organization">American Medical Association</h5>
 		    <div class="aka">
           <h5 class="category">Also known as...</h5>
           <p>AMA</p>
