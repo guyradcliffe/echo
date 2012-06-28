@@ -31,19 +31,6 @@ $(document).ready(function() {
 });
 </script>
 
-<style type="text/css">
-form.echofeedback {width:608px;}
-form.echofeedback div.inside {width:608px;}
-form.echofeedback div.inside div.row {width:608px; margin:0 0 20px 0;}
-form.echofeedback div.inside div.row label {}
-form.echofeedback div.inside div.row label.error {display: none;}	
-form.echofeedback div.inside div.row label.error, label.error {color: red; margin-left:20px;}
-form.echofeedback div.inside div.row input.name {width:150px; margin:0 3px 0 0;}
-form.echofeedback div.inside div.row div.commentserror {margin:0 125px 0 0; float:right; padding:0;}
-form.echofeedback div.inside div.row input.submit {background:url(../images/echo-submit-btn.gif) no-repeat; border:none; width:160px; height:25px; cursor:pointer; cursor:hand;}
-form.echofeedback div.inside div.row input.submit:hover {background:url(../images/echo-submit-btn-hover.gif) no-repeat 0 0;}
-form.echofeedback div.inside div.row textarea {resize:none; height:100px;}
-</style>
 <!--[if lt IE 8]><style type="text/css">
 form.echofeedback div.inside div.row input.name {width:150px; margin:0;}
 form.echofeedback div.inside div.row div.commentserror {margin:0 125px 0 0; position:absolute; top:0px; left:300px;}
