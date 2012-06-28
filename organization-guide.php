@@ -2,123 +2,6 @@
 include ("../common/header-echo.php"); 
 $organization = $_GET['organization'];
 ?>
-<style type="text/css">
-/*********************** ECHO Organization Guide ********************/
-div.fadeholder {width:620px; min-height:510px;}
-div.fadeholder div.menu {float:left; width:65px; height:505px; margin:0 15px 0 0;}/*background:#b2e1e7; */
-div.fadeholder div.menu div.left {float:left; width:30px; height:420px; margin:40px 5px 0 0;}
-div.fadeholder div.menu div.right {float:left; width:30px; height:505px; margin:0;}
-
-a div.btn-acgme {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-acgme.png) no-repeat;}
-a div.btn-acgme:hover {background:url(../images/echo-organization-guide-btn-acgme-hover.png) no-repeat;}
-a div.btn-acgme-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-acgme-hover.png) no-repeat;}
-
-a div.btn-abms {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-abms.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-abms:hover {background:url(../images/echo-organization-guide-btn-abms-hover.png) no-repeat;}
-a div.btn-abms-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-abms-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-aha {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-aha.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-aha:hover {background:url(../images/echo-organization-guide-btn-aha-hover.png) no-repeat;}
-a div.btn-aha-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-aha-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-ama {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-ama.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-ama:hover {background:url(../images/echo-organization-guide-btn-ama-hover.png) no-repeat;}
-a div.btn-ama-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-ama-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-aamc {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-aamc.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-aamc:hover {background:url(../images/echo-organization-guide-btn-aamc-hover.png) no-repeat;}
-a div.btn-aamc-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-aamc-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-dos {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-dos.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-dos:hover {background:url(../images/echo-organization-guide-btn-dos-hover.png) no-repeat;}
-a div.btn-dos-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-dos-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-ecfmg {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-ecfmg.png) no-repeat;}
-a div.btn-ecfmg:hover {background:url(../images/echo-organization-guide-btn-ecfmg-hover.png) no-repeat;}
-a div.btn-ecfmg-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-ecfmg-hover.png) no-repeat;}
-
-a div.btn-fsmb {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-fsmb.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-fsmb:hover {background:url(../images/echo-organization-guide-btn-fsmb-hover.png) no-repeat;}
-a div.btn-fsmb-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-fsmb-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-jcaho {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-jcaho.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-jcaho:hover {background:url(../images/echo-organization-guide-btn-jcaho-hover.png) no-repeat;}
-a div.btn-jcaho-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-jcaho-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-nbme {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-nbme.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-nbme:hover {background:url(../images/echo-organization-guide-btn-nbme-hover.png) no-repeat;}
-a div.btn-nbme-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-nbme-hover.png) no-repeat; margin:5px 0 0 0;}
-
-a div.btn-nrmp {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-nrmp.png) no-repeat; margin:5px 0 0 0;}
-a div.btn-nrmp:hover {background:url(../images/echo-organization-guide-btn-nrmp-hover.png) no-repeat;}
-a div.btn-nrmp-active {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-nrmp-hover.png) no-repeat; margin:5px 0 0 0;}
-
-div.fadeholder div.organization {float:left; background:#fff; top:0; left;0; width:540px;}
-div.fadeholder div.organization div.aka {height:30px; border:1px solid #73cbd6; margin:0 0 10px 0; -webkit-border-radius: 5px; border-radius: 5px;
-background: #c7eaef; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZWFlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #c7eaef 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7eaef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-}
-div.fadeholder div.organization div.mission-is {height:30px; border:1px solid #73cbd6; margin:0 0 10px 0; -webkit-border-radius: 5px; border-radius: 5px;
-background: #c7eaef; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZWFlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #c7eaef 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7eaef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-}
-div.fadeholder div.organization div.contact-them {height:30px; border:1px solid #73cbd6; margin:0 0 10px 0; -webkit-border-radius: 5px; border-radius: 5px;
-background: #c7eaef; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZWFlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #c7eaef 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7eaef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-}
-div.fadeholder div.organization div.might-find {height:30px; border:1px solid #73cbd6; margin:0 0 10px 0; -webkit-border-radius: 5px; border-radius: 5px;
-background: #c7eaef; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZWFlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #c7eaef 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7eaef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-}
-div.fadeholder div.organization div.visit-them {height:30px; border:1px solid #73cbd6; -webkit-border-radius: 5px; border-radius: 5px;
-background: #c7eaef; /* Old browsers */
-/* IE9 SVG, needs conditional override of 'filter' to 'none' */
-background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M3ZWFlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-background: -moz-linear-gradient(top,  #c7eaef 0%, #ffffff 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c7eaef), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
-background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
-}
-div.fadeholder div.organization div.visit-them a {margin:0 0 15px 15px;}
-div.fadeholder div.organization h5.organization {margin:0 0 10px 0; color:#006699;}
-div.fadeholder div.organization h5.category {margin:5px 0 0 5px; color:#006699;}
-div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
-</style>
 
 	<div class="grid_660">
     <h1 class="imageheader"><img src="../images/echo-organization-guide.gif" alt="Organization Guide" /></h1>
@@ -175,16 +58,16 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>To improve health care by assessing and advancing the quality of resident physicians' education through exemplary accreditation.</p>
+          <p>To improve health care by assessing and advancing the quality of resident physicians&rsquo; education through accreditation.</p>
         </div>
         <script type="text/javascript">$(".mission-is").animate({"height": "70px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
+            <li>Research accredited GME programs</li>
             <li>Register for the ACGME Leadership Skills Training Program for Chief Residents</li>
             <li>Report a concern or formal complaint about residency education and/or the learning environment in an ACGME accredited program/institution</li>
             <li>Take the Resident/Fellow survey</li>
-            <li>Research accredited GME programs</li>
             <li>Learn about ACGME Standards governing resident duty hours</li>
           </ul>
         </div>
@@ -192,13 +75,13 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
+            <li>List of ACGME Accredited Programs and Sponsoring Institutions</li>
             <li>ACGME Duty Hours Regulations</li>
             <li>ACGME Glossary of Terms</li>
-            <li>List of ACGME Accredited Programs and Sponsoring Institutions</li>
-            <li>Journal on Graduate Medical Education</li>
+            <li><i>Journal of Graduate</i> Medical Education</li>  
             <li>Position Papers</li>
-            <li>Resident/Fellow Survey</li>
-            <li>Resident Review Newsletter</li>
+            <li>Resident/Fellow Survey</li> 
+            <li><i>Resident Review</i> newsletter</li>
           </ul>
         </div>
         <script type="text/javascript">$(".might-find").animate({"height": "170px"}, 1500);</script>
@@ -220,13 +103,13 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>To maintain and improve the quality of medical care by assisting the Member Boards in their efforts to develop and utilize professional and educational standards for the certification of physician specialists in the United States and internationally.</p>
+          <p>To maintain and improve the quality of medical care by assisting the Member Boards in their efforts to develop and utilize professional and educational standards for the certification of physician specialists in the United States and internationally</p>
         </div>
         <script type="text/javascript">$(".mission-is").animate({"height": "90px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
-            <li>Learn about specialty certification in the U.S.
+            <li>Learn about specialty certification in the U.S.</li>
             <li>Request updates to your physician profile in the ABMS Directory of Board Certified Medical Specialists&reg;</li>
             <li>Find contact information for an ABMS Member Board</li>
             <li>Verify a doctor&rsquo;s Board Certification</li>
@@ -236,7 +119,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
-            <li>The Six Core Competencies for Quality Patient Care
+            <li>The Six Core Competencies for Quality Patient Care</li>
             <li>ABMS Patient Safety Courses</li>
             <li>Annual ABMS Certificate Statistics</li>
             <li>Annual ABME Guide to Medical Specialties</li>
@@ -261,13 +144,13 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>To advance the health of individuals and communities. The AHA leads, represents and serves hospitals, health systems and other related organizations that are accountable to the community and committed to health improvement.</p>
+          <p> To advance the health of individuals and communities. The AHA leads, represents and serves hospitals, health systems and other related organizations that are accountable to the community and committed to health improvement.</p>
         </div>
         <script type="text/javascript">$(".mission-is").animate({"height": "100px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
-            <li>Stay up-to-date on health care advocacy efforts, such as those involving Medicare, Medicaid, and health care reform</li>
+            <li>Stay up-to-date on health care advocacy efforts, such as those involving Medicare, Medicaid, and health care reform </li>
           </ul>
         </div>
         <script type="text/javascript">$(".contact-them").animate({"height": "80px"}, 1500);</script>
@@ -303,24 +186,24 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
-            <li>Join the AMA</li.
+            <li>Join the AMA</li>
             <li>Get involved with AMA Sections and Special Groups, including the Resident and Fellow Section, Young Physician Section, the International Medical Graduates Section, and the Women Physicians Congress</li>
             <li>Earn Continuing Medical Education (CME) credits</li>
             <li>Search the JAMA Career Center</li>
             <li>Learn about Observerships and Observership programs</li>
-            <li>Follow AMA&lsquo;s advocacy efforts</li>
+            <li>Follow AMA&rsquo;s advocacy efforts</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".contact-them").animate({"height": "155px"}, 1500);</script>
+        <script type="text/javascript">$(".contact-them").animate({"height": "175px"}, 1500);</script>
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
-            <li>FREIDA Online</li>
+            <li>Fellowship and Residency Electronic Interactive Database (FREIDA) On-line</li>
             <li>State Medical Licensure Requirements and Statistics</li>
             <li>Graduate Medical Education Directory (GMED)</li>
             <li>AMA Resident and Fellow Section Listserv</li>
             <li>GME e-Letter</li>
-            <li>Journal of the American Medical Association (JAMA)</li>
+            <li>Journal of the American Medical Association(JAMA)</li>
             <li>AMA Morning Rounds e-newsletter</li>
             <li>Introduction to the Practice of Medicine educational series</li>
             <li>Succeeding from Medical School to Practice</li>
@@ -348,13 +231,13 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>The AAMC serves and leads the academic medicine community to improve the health of all.</p>
+          <p>To serve and lead the academic medicine community to improve the health of all.</p>
         </div>
-        <script type="text/javascript">$(".mission-is").animate({"height": "70px"}, 500);</script>
+        <script type="text/javascript">$(".mission-is").animate({"height": "60px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
-            <li>Access the Electronic Residency Application Service (ERAS); complete and manage your ERAS application; and apply to residency programs</li>
+            <li> Access the Electronic Residency Application Service (ERAS); complete and manage your ERAS application; and apply to residency programs</li>
             <li>Monitor the status of your ERAS application through the Applicant Document Tracking System (ADTS)</li>
             <li>Access FindAResident to find open residency and fellowship positions</li>
             <li>Access CareerConnect to serach for jobs at medical schools and teaching hospitals</li>
@@ -368,7 +251,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
             <li>Roadmap to Residency: From Application to the Match and Beyond</li>
-            <li>A Guide to the Preparation of the Medical Student Performance Evaluation.</li>
+            <li>A Guide to the Preparation of the Medical Student Performance Evaluation</li>
             <li>ERAS Integrity Promotion Education Program</li>
             <li>AAMC Data Book</li>
             <li>AAMC Survey of Resident/Fellow Stipends and Benefits</li>
@@ -396,7 +279,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>Shape and sustain a peaceful, prosperous, just, and democratic world and foster conditions for stability and progress for the benefit of the American people and people everywhere.</p>
+          <p>To shape and sustain a peaceful, prosperous, just, and democratic world and foster conditions for stability and progress for the benefit of the American people and people everywhere.</p>
         </div>
         <script type="text/javascript">$(".mission-is").animate({"height": "90px"}, 500);</script>
         <div class="contact-them">
@@ -404,7 +287,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
           <ul>
             <li>Find a U.S. Embassy or Consulate</li>
             <li>Research available visas for temporary workers, including the J-1 and the H-1B</li>
-            <li>Research available visas for spouses and dependents of termporary workers</li>
+            <li>Research available visas for spouses and dependents of temporary workers</li>
             <li>Learn about U.S. immigration regulations</li>
             <li>Obtain visa and immigration-related forms</li>
           </ul>
@@ -435,35 +318,39 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>The ECFMG promotes quality health care for the public by certifying international medical graduates for entry into U.S. graduate medical education, and by participating in the evaluation and certification of other physicians and health care professionals nationally and internationally. In conjunction with its Foundation for Advancement of International Medical Education and Research (FAIMER), and other partners, it actively seeks opportunities to promote medical education through programmatic and research activities.</p>
+          <p>To promote quality health care for the public by certifying international medical graduates for entry into U.S. graduate medical education, and by participating in the evaluation and certification of other physicians and health care professionals nationally and internationally. In conjunction with its Foundation for Advancement of International Medical Education and Research (FAIMER), and other partners, it actively seeks opportunities to promote medical education through programmatic and research activities.</p>
         </div>
-        <script type="text/javascript">$(".mission-is").animate({"height": "170px"}, 500);</script>
+        <script type="text/javascript">$(".mission-is").animate({"height": "160px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
             <li>Apply for ECFMG Certification</li>
-            <li>Apply for USMLE Step 1, 2 CK, and 2 CS; obtain USMLE results; and request USMLE Transcripts if you have not take Step 3</li>
-            <li>Request verification of your ECFMG Certification status be sent to a state medical board/medical licensing authority</li>
+            <li>Apply for USMLE Step 1, 2 CK, and 2 CS; obtain USMLE results; and request USMLE Transcripts if you have not taken Step 3</li>
+            <li>Request verification of your ECFMG certification status be sent to a state medical board/medical licensing authority</li>
             <li>Obtain a token to participate in the Electronic Residency Application Service (ERAS) and manage the submission of your ERAS supporting documents</li>
+            <li>Complete an application for J-1 visa sponsorship and mantain your visa status throughout your residency</li>
+            <li>Have your medical credentials primary-source verified and proof of this verification sent to a medical regulatory authority</li>
+            <li>Access the ECFMG Certificate Holders Office (ECHO)</li>
+            <li>Stay up-to-date on news related to USMLE and ECFMG Certification</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".contact-them").animate({"height": "170px"}, 1500);</script>
+        <script type="text/javascript">$(".contact-them").animate({"height": "260px"}, 1500);</script>
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
-            <li>ECFMG Information Booklet</li>
-            <li>USMLE Bulletin of Information</li>
-            <li>ECFMG Certification Fact Sheet</li>
+            <li><i>ECFMG Information Booklet</i></li>
+            <li><i>USMLE Bulletin of Information</i></li>
+            <li><i>ECFMG Certification Fact Sheet</i></li>
             <li>Reference Guide for Medical Education Credentials</li>
-            <li>ECFMG Fact Card</li>
-            <li>The ECFMG Reporter</li>
-            <li>ECFMG-ERAS News</li>
-            <li>Exchange Visitor Sponsorship Program Reference Guide</li>
-            <li>ECHO News</li>
+            <li><i>ECFMG Fact Card</i></li>
+            <li><i>The ECFMG Reporter</i></li>
+            <li><i>ECFMG-ERAS News</i></li>
+            <li><i>Exchange Visitor Sponsorship Program Reference Guide</i></li>
+            <li><i>ECHO News</i></li>
             <li>ECFMG Policies and Procedures Regarding Irregular Behavior</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".might-find").animate({"height": "220px"}, 1500);</script>
+        <script type="text/javascript">$(".might-find").animate({"height": "210px"}, 1500);</script>
         <div class="visit-them">
           <h5 class="category">You can visit them at...</h5>
           <a href="http://www.ecfmg.org/" target="_blank">http://www.ecfmg.org/</a>
@@ -482,7 +369,7 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
         <script type="text/javascript">$(".aka").animate({"height": "50px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>FSMB leads by promoting excellence in medical practice, licensure, and regulation as the national resource and voice on behalf of state medical boards in their protection of the public.</p>
+          <p>To lead by promoting excellence in medical practice, licensure, and regulation as the national resource and voice on behalf of state medical boards in their protection of the public.</p>
         </div>
         <script type="text/javascript">$(".mission-is").animate({"height": "90px"}, 500);</script>
         <div class="contact-them">
@@ -491,27 +378,29 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
             <li>Apply for USMLE Step 3; obtain Step 3 scores; and request a USMLE Transcript once you have taken Step 3</li>
             <li>Apply for the Special Purpose Examination (SPEX); obtain SPEX scores; request SPEX transcripts</li>
             <li>Find an assessment program that can refer you to take the Post-Licensure Assessment System (PLAS)</li>
-            <li>Access the Federation Credentials</li>
+            <li>Access the Federation Credentials Verification Service (FCVS)</li>
+            <li>Complete the Uniform Application for Physician State Licensure (UA)</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".contact-them").animate({"height": "160px"}, 1500);</script>
+        <script type="text/javascript">$(".contact-them").animate({"height": "175px"}, 1500);</script>
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
             <li>USMLE Bulletin of Information</li>
             <li>USMLE Step 3 Content Description and General Information</li>
-            <li>State-specific Requirements for Initial Medical Licensure
+            <li>State-specific Requirements for Initial Medical Licensure</li>
             <li>SPEX Information Bulletin</li>
             <li>Directory of Assessment &amp; Remediation Programs</li>
             <li>Licensing Boards Accepting FCVS Physician Information Profiles</li>
-            <li>Directory of State Medical and Osteopathic Boards
+            <li>Directory of State Medical and Osteopathic Boards</li>
             <li>FSMB Newsline</li>
+            <li>Journal of Medical Regulation</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".might-find").animate({"height": "180px"}, 1500);</script>
+        <script type="text/javascript">$(".might-find").animate({"height": "190px"}, 1500);</script>
         <div class="visit-them">
           <h5 class="category">You can visit them at...</h5>
-          <a href="http://www.fsmb.org/" target="_blank">http://www.fsmb.org/</a>
+          <a href="http://fsmb.org/" target="_blank">http://www.fsmb.org/</a>
         </div>
         <script type="text/javascript">$(".visit-them").animate({"height": "60px"}, 500);</script>
       </div><!-- end organization -->
@@ -571,11 +460,11 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
             <li>Purchase and take a self-assessment to prepare for USMLE Steps 1, 2 CK, and 3</li>
           </ul>
         </div>
-        <script type="text/javascript">$(".contact-them").animate({"height": "70px"}, 1500);</script>
+        <script type="text/javascript">$(".contact-them").animate({"height": "60px"}, 1500);</script>
         <div class="might-find">
           <h5 class="category">Some resources you might find helpful...</h5>
           <ul>
-            <li>USMLE Bulletin of Information</li>
+            <li>USMLE <i>Bulletin of Information</i></li>
             <li>Self-assessment Services Information Guide</li>
           </ul>
         </div>
@@ -593,14 +482,14 @@ div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
 		    <h5 class="organization">National Resident Matching Program</h5>
 		    <div class="aka">
           <h5 class="category">Also known as...</h5>
-          <p>Joint Commission or JCAHO</p>
+          <p>NRMP or "the Match"</p>
         </div>
         <script type="text/javascript">$(".aka").animate({"height": "60px"}, 500);</script>
         <div class="mission-is">
           <h5 class="category">Their Mission is...</h5>
-          <p>established in 1952 to provide a uniform date of appointment to positions in graduate medical education (GME).</p>
+          <p>To provide a uniform date of appointment to positions in graduate medical education (GME). Or..... To provide a mechanism for matching residency applicants to programs according to the preferences expressed by both parties on their individualized rank order lists. The NRMP is NOT a centralized application service for individuals applying to graduate medical education programs and does not advise applicants in selecting specialties or programs.</p>
         </div>
-        <script type="text/javascript">$(".mission-is").animate({"height": "70px"}, 500);</script>
+        <script type="text/javascript">$(".mission-is").animate({"height": "140px"}, 500);</script>
         <div class="contact-them">
           <h5 class="category">You might contact them to...</h5>
           <ul>
