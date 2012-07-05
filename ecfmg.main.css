@@ -47,6 +47,8 @@ ol.eras-numlist li {margin-bottom:10px;}
 p.margintop-decrease {margin-top:-10px;}
 div.marginadjustmentlist {margin-bottom:20px; margin-top:-10px;}
 .blue {#006699;}
+select.echodropdown {width:310px; font-size:12px;}
+
 
 /******************** Google Search ***********************/
 div.header_960 td.gsc-clear-button {display:none;}
@@ -180,27 +182,6 @@ div.grid_980 div.grid_660 div.div_660 div.onecolumn h1 {height:20px; width:300px
 div.grid_980 div.grid_660 div.div_660 div.onecolumn ul {clear:both;}
 div.grid_980 div.grid_660 div.div_660 span.donts {font-weight:bold;}
 
-/**********************ECHO Feedback Form ********************/
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback {float:left; width:610px; margin:15px 0 0 0;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form {margin:0;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow {margin:0 0 15px 0; width:608px; min-height:40px;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.label {float:left; width:130px; height:35px; text-align:right;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.label label {margin:0 0 0 15px;}
-
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input {float:left; width:230px; height:30px; margin:0 0 0 15px;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input a.yes {float:left; display:block; width:50px; height:25px; background:url(../images/echo-certified-btn-yes.gif) no-repeat;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input a.yes:hover {background:url(../images/echo-certified-btn-yes-hover.gif) no-repeat;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input a.no {float:left; display:block; width:50px; height:25px; background:url(../images/echo-certified-btn-no.gif) no-repeat;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input a.no:hover {background:url(../images/echo-certified-btn-no-hover.gif) no-repeat;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input input {margin:0; width:210px;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input input.submit {background:url(../images/echo-feedback-btn.gif) no-repeat; border:none; width:215px; height:25px; cursor:pointer; cursor:hand;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input input.submit:hover {background:url(../images/echo-feedback-btn-hover.gif) no-repeat;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input select {margin:0;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.input textarea {margin:0 0 20px 0; width:210px; height:100px; resize:none;}
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.certified {float:left; margin:0 0 0 15px; width:230px;}
-
-div.grid_980 div.grid_660 div.div_660 div.echo-feedback form div.formrow div.error {float:left; width:210px; min-height:40px; color:#ff0000;}
-
 /**************ECHO FEEDBACK FORM ****************************/
 form.echofeedback {width:608px;}
 form.echofeedback div.inside {width:608px;}
@@ -236,6 +217,15 @@ div.fadeholder {width:620px; min-height:510px;}
 div.fadeholder div.menu {float:left; width:65px; height:505px; margin:0 15px 0 0;}/*background:#b2e1e7; */
 div.fadeholder div.menu div.left {float:left; width:30px; height:420px; margin:40px 5px 0 0;}
 div.fadeholder div.menu div.right {float:left; width:30px; height:505px; margin:0;}
+
+div.fadeholder div.organization div.visit-them a {margin:0 0 15px 15px;}
+div.fadeholder div.organization h5.organization {margin:0 0 10px 0; color:#006699;}
+div.fadeholder div.organization h5.category {margin:5px 0 0 5px; color:#006699;}
+div.fadeholder div.organization ul {margin:0 10px 15px 15px;}
+div.fadeholder div.organization div.aka p {margin:0 10px 15px 15px;}
+div.fadeholder div.organization div.mission-is p {margin:0 10px 15px 15px;}
+div.fadeholder div.organization div.contact-them p {margin:0 10px 15px 15px;}
+div.fadeholder div.organization div.might-find p {margin:0 10px 15px 15px;}
 
 a div.btn-acgme {float:left; width:30px; height:80px; background:url(../images/echo-organization-guide-btn-acgme.png) no-repeat;}
 a div.btn-acgme:hover {background:url(../images/echo-organization-guide-btn-acgme-hover.png) no-repeat;}
@@ -342,10 +332,6 @@ background: -ms-linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* IE10+ */
 background: linear-gradient(top,  #c7eaef 0%,#ffffff 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7eaef', endColorstr='#ffffff',GradientType=0 ); /* IE6-8 */
 }
-div.fadeholder div.organization div.visit-them a {margin:0 0 15px 15px;}
-div.fadeholder div.organization h5.organization {margin:0 0 10px 0; color:#006699;}
-div.fadeholder div.organization h5.category {margin:5px 0 0 5px; color:#006699;}
-div.fadeholder div.organization ul,p {margin:0 10px 15px 15px;}
 
 /*************** IMG PORTAL PAGE ******************/
 div.grid_980 div.grid_660 div.threecolumn {float:left; width:324px;}
